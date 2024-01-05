@@ -711,7 +711,9 @@ def parse_file(ifn, t_name, enc, tzone, tzone_os = 0):
 	
 	if tzone_os != 0:
 		tz = f' using time zone offset {tzone}'
-
+	
+	else:
+		tz = ''
 	
 	title_1 = f"""
 ========================================================================
