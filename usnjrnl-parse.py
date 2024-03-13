@@ -469,6 +469,7 @@ def change_reason(hex_data, source):
 	if source == "change_reason":
 		reason_dic = {
 		'1_00':'',
+		'1_01':'Desired Storage Class change', 
 		'2_01':'UNKNOWN DATA',
 		'2_02':'UNKNOWN DATA',
 		'2_04':'UNKNOWN DATA',
@@ -637,7 +638,7 @@ def change_reason(hex_data, source):
 		i_total = 0
 		h_total = ''
 		key_temp = str(x) + "_"
-		
+		 
 		for y in dic_values_4t[x]:
 			val_temp = key_temp + y
 			dic_val_temp = reason_dic[val_temp]
