@@ -380,7 +380,10 @@ file containing your exported journal data in text format.
 			if response == 'b':
 				e = 'binary file '
 				# GET THE TIMEZONE INFORMATION
-				tzone, tzone_os = get_timezone_offset()
+				# tzone, tzone_os = get_timezone_offset()
+				# Binary Timezones all appear to be in LT, therefore skipping this part now.  
+				tzone = 'LT'
+				tzone_os = 0
 			
 			if response == 't':
 				e = 'text file '
@@ -1091,7 +1094,7 @@ Input "no" to abort.
 					y = str(int(int(tzone_os / 60 / 60)))
 					if y == "0":
 						y = ""
-					s_timestamp = s_timestamp + ' UTC' + y
+					s_timestamp = s_timestamp + ' LT' + y
 					y = None
 
 								
