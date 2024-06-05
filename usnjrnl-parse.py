@@ -644,7 +644,10 @@ def change_reason(hex_data, source):
 		 
 		for y in dic_values_4t[x]:
 			val_temp = key_temp + y
-			dic_val_temp = reason_dic[val_temp]
+			if val_temp in reason_dic:
+				dic_val_temp = reason_dic[val_temp]
+			else:
+				dic_val_temp = 'Other/Undocumented'
 			str_list.append(dic_val_temp)
 			i_val = int(y, 16)
 			i_total +=i_val
